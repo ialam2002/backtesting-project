@@ -2,9 +2,21 @@ add_executable(test_event_queue unit/test_event_queue.cpp)
 target_link_libraries(test_event_queue PRIVATE quant_backtester_lib)
 add_test(NAME test_event_queue COMMAND test_event_queue)
 
+add_executable(test_data_normalizer unit/test_data_normalizer.cpp)
+target_link_libraries(test_data_normalizer PRIVATE quant_backtester_lib)
+add_test(NAME test_data_normalizer COMMAND test_data_normalizer)
+
+add_executable(test_execution_partial_fills unit/test_execution_partial_fills.cpp)
+target_link_libraries(test_execution_partial_fills PRIVATE quant_backtester_lib)
+add_test(NAME test_execution_partial_fills COMMAND test_execution_partial_fills)
+
 add_executable(test_oms_pipeline unit/test_oms_pipeline.cpp)
 target_link_libraries(test_oms_pipeline PRIVATE quant_backtester_lib)
 add_test(NAME test_oms_pipeline COMMAND test_oms_pipeline)
+
+add_executable(test_performance_metrics unit/test_performance_metrics.cpp)
+target_link_libraries(test_performance_metrics PRIVATE quant_backtester_lib)
+add_test(NAME test_performance_metrics COMMAND test_performance_metrics)
 
 add_executable(test_portfolio unit/test_portfolio.cpp)
 target_link_libraries(test_portfolio PRIVATE quant_backtester_lib)

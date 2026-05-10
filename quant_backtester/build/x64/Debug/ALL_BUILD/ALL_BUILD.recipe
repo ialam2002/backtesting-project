@@ -8,13 +8,22 @@
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\src\Debug\backtester.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_data_normalizer.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_event_queue.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_execution_partial_fills.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_full_backtest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_oms_pipeline.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_performance_metrics.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_portfolio.exe</FullPath>

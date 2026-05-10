@@ -1,5 +1,6 @@
 #include <cassert>
 #include <cstdio>
+#include <filesystem>
 #include <vector>
 
 #include "quant/core/engine.h"
@@ -25,6 +26,11 @@ int main() {
     BacktestResult result = engine.run(prices, 7);
 
     assert(!result.event_log.empty());
+    assert(!result.run_id.empty());
+    assert(!result.run_directory.empty());
+    assert(std::filesystem::exists(result.run_directory));
+    assert(!result.replay_log_path.empty());
+    assert(std::filesystem::exists(result.replay_log_path));
 
     const char* path = "replay_log.csv";
     assert(logger.write_csv(path));

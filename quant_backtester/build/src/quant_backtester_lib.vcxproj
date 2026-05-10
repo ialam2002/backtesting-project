@@ -311,7 +311,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\csv_reader.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_feed.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_loader.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_normalizer.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\execution_engine.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\fill_simulator.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\order_generator.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\order_manager.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\order_router.cpp" />
@@ -326,6 +328,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\strategy\moving_average.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\event_logger.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\replay_engine.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\run_context.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

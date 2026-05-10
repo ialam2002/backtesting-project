@@ -22,7 +22,13 @@
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_normalizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\execution_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\fill_simulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\order_generator.cpp">
@@ -65,6 +71,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\replay_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\run_context.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

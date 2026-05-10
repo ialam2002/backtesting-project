@@ -13,6 +13,9 @@ std::string build_performance_report(
     out << "Performance Report\n";
     out << "------------------\n";
     out << "Sharpe: " << sharpe_ratio(returns) << "\n";
+    out << "Sortino: " << sortino_ratio(returns) << "\n";
+    out << "Volatility: " << volatility(returns) << "\n";
+    out << "Win/Loss Ratio: " << win_loss_ratio(returns) << "\n";
     out << "Max Drawdown: " << max_drawdown(equity_curve) << "\n";
     if (!equity_curve.empty()) {
         out << "Final Equity: " << equity_curve.back() << "\n";

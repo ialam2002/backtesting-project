@@ -25,6 +25,9 @@ int main() {
     BacktestResult result = engine.run(demo_prices, 1);
 
     std::cout << result.report;
+    std::cout << "Run ID: " << result.run_id << '\n';
+    std::cout << "Run Directory: " << result.run_directory << '\n';
+    std::cout << "Replay Log: " << result.replay_log_path << '\n';
     std::cout << "Logged events: " << result.event_log.size() << '\n';
     return 0;
 }

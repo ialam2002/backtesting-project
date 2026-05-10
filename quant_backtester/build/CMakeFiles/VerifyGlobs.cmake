@@ -61,6 +61,7 @@ set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/data/csv_reader.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/data/data_feed.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/data/data_loader.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/data/data_normalizer.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -112,6 +113,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/*.cpp")
 set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/execution_engine.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/fill_simulator.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/order_generator.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/order_manager.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/execution/order_router.cpp"
@@ -201,6 +203,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Deskto
 set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/event_logger.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/replay_engine.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/run_context.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

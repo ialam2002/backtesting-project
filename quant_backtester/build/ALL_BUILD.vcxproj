@@ -182,9 +182,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{5A7CE93B-9F0E-340E-9283-0FF51F2F856D}</Project>
       <Name>quant_backtester_lib</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_data_normalizer.vcxproj">
+      <Project>{6889B11F-0764-3611-A6C9-4DCC869660CF}</Project>
+      <Name>test_data_normalizer</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_event_queue.vcxproj">
       <Project>{A3204DBB-2BC7-3817-B616-E6740A0C2542}</Project>
       <Name>test_event_queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_execution_partial_fills.vcxproj">
+      <Project>{551F9AEC-99E6-35B4-AB85-804928CB5AB9}</Project>
+      <Name>test_execution_partial_fills</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_full_backtest.vcxproj">
       <Project>{410DEF39-C91A-3809-8C4E-008DF225E591}</Project>
@@ -193,6 +201,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_oms_pipeline.vcxproj">
       <Project>{8ED5732F-1647-3C9F-AD78-600BCCFFD70D}</Project>
       <Name>test_oms_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_performance_metrics.vcxproj">
+      <Project>{5A10EC6A-C03B-3CD1-86D8-CDC4D006EC5D}</Project>
+      <Name>test_performance_metrics</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_portfolio.vcxproj">
       <Project>{BEB97F6E-0952-347C-9532-9F644F09B64B}</Project>

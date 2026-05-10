@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <vector>
 
 #include "quant/analytics/report_generator.h"
@@ -18,6 +19,9 @@ struct BacktestResult {
     std::vector<double> returns;
     std::string report;
     std::vector<LoggedEvent> event_log;
+    std::string run_id;
+    std::string run_directory;
+    std::string replay_log_path;
 };
 
 class Engine {
@@ -27,7 +31,8 @@ public:
         OrderManager order_manager,
         ExecutionEngine execution_engine,
         Portfolio portfolio,
-        EventLogger* event_logger = nullptr);
+        EventLogger* event_logger = nullptr,
+        std::string artifacts_root = "configs/experiments");
 
     BacktestResult run(const std::vector<Price>& prices, InstrumentId instrument = 1);
 
@@ -38,6 +43,7 @@ private:
     Portfolio portfolio_;
     SimulationClock clock_;
     EventLogger* event_logger_;
+    std::string artifacts_root_;
 };
 
 }  // namespace quant

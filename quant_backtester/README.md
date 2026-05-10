@@ -14,6 +14,10 @@ Production-style C++ backtesting skeleton using CMake.
 - Event-driven pipeline: Market -> Signal -> Order -> Fill -> Portfolio -> Metrics.
 - OMS is split into `SignalHandler`, `OrderGenerator`, and `OrderRouter`.
 - Deterministic replay is supported through `EventLogger` + `ReplayEngine` CSV logs.
+- Data normalization supports OHLCV schema validation and timestamp normalization.
+- Execution supports partial fill simulation via `FillSimulator`.
+- Analytics includes Sharpe, Sortino, volatility, win/loss ratio, and max drawdown.
+- Each run writes artifacts under `configs/experiments/<run_id>/`.
 
 ## Build
 
@@ -27,6 +31,12 @@ cmake --build build
 
 ```powershell
 .\build\src\backtester.exe
+```
+
+Or use the helper script:
+
+```powershell
+.\scripts\run_experiment.ps1 -BuildType Debug
 ```
 
 ## Test

@@ -1,8 +1,11 @@
 #include "quant/core/engine.h"
 
-#include <memory>
+#include <filesystem>
+#include <fstream>
+#include <utility>
 
 #include "quant/events/market_event.h"
+#include "quant/utils/run_context.h"
 
 namespace quant {
 
@@ -11,13 +14,15 @@ Engine::Engine(
         OrderManager order_manager,
         ExecutionEngine execution_engine,
         Portfolio portfolio,
-        EventLogger* event_logger)
+        EventLogger* event_logger,
+        std::string artifacts_root)
     : strategy_(strategy),
       order_manager_(order_manager),
       execution_engine_(execution_engine),
       portfolio_(portfolio),
             clock_(0),
-            event_logger_(event_logger) {
+            event_logger_(event_logger),
+            artifacts_root_(std::move(artifacts_root)) {
         if (event_logger_ != nullptr) {
                 event_logger_->clear();
         }
@@ -25,6 +30,9 @@ Engine::Engine(
 
 BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instrument) {
     BacktestResult result;
+    result.run_id = make_run_id();
+    result.run_directory = ensure_run_directory(artifacts_root_, result.run_id);
+
     result.equity_curve.reserve(prices.size());
     result.returns.reserve(prices.size() > 0 ? prices.size() - 1 : 0);
 
@@ -46,11 +54,13 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
                     event_logger_->log_order(*order);
                 }
 
-                FillEvent fill = execution_engine_.execute(*order, p);
-                if (event_logger_ != nullptr) {
-                    event_logger_->log_fill(fill);
+                const auto fills = execution_engine_.execute_with_partial_fills(*order, p);
+                for (const auto& fill : fills) {
+                    if (event_logger_ != nullptr) {
+                        event_logger_->log_fill(fill);
+                    }
+                    portfolio_.on_fill(fill, 0.0);
                 }
-                portfolio_.on_fill(fill, 0.0);
             }
         }
 
@@ -66,6 +76,16 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
     result.report = build_performance_report(result.returns, result.equity_curve);
     if (event_logger_ != nullptr) {
         result.event_log = event_logger_->events();
+        result.replay_log_path = (std::filesystem::path(result.run_directory) / "events.csv").string();
+        event_logger_->write_csv(result.replay_log_path);
+    }
+
+    if (!result.run_directory.empty()) {
+        const auto report_path = std::filesystem::path(result.run_directory) / "report.txt";
+        std::ofstream report_file(report_path.string());
+        if (report_file.is_open()) {
+            report_file << result.report;
+        }
     }
     return result;
 }
