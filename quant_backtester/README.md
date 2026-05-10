@@ -9,6 +9,12 @@ Production-style C++ backtesting skeleton using CMake.
 - `tests`: unit + integration tests
 - `configs`, `data`, `scripts`: runtime and operational assets
 
+## Architecture Notes
+
+- Event-driven pipeline: Market -> Signal -> Order -> Fill -> Portfolio -> Metrics.
+- OMS is split into `SignalHandler`, `OrderGenerator`, and `OrderRouter`.
+- Deterministic replay is supported through `EventLogger` + `ReplayEngine` CSV logs.
+
 ## Build
 
 ```powershell
