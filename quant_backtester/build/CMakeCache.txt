@@ -191,6 +191,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Build test targets
 QUANT_BUILD_TESTS:BOOL=ON
 
+//Enable Parquet file ingestion support
+QUANT_ENABLE_PARQUET:BOOL=OFF
+
 //Value Computed by CMake
 QuantBacktester_BINARY_DIR:STATIC=C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build
 

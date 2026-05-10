@@ -16,5 +16,14 @@ target_include_directories(quant_backtester_lib
         ${PROJECT_SOURCE_DIR}/include
 )
 
+# Conditionally enable Parquet support
+if(QUANT_ENABLE_PARQUET)
+    find_package(Arrow REQUIRED)
+    find_package(Parquet REQUIRED)
+    
+    target_link_libraries(quant_backtester_lib PRIVATE Arrow::arrow_shared Parquet::parquet_shared)
+    target_compile_definitions(quant_backtester_lib PRIVATE QUANT_PARQUET_ENABLED)
+endif()
+
 add_executable(backtester ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(backtester PRIVATE quant_backtester_lib)
