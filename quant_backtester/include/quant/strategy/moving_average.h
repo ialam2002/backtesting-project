@@ -7,9 +7,14 @@
 
 namespace quant {
 
+/**
+ * @brief Moving-average crossover strategy with stateful side tracking.
+ */
 class MovingAverageCrossStrategy : public StrategyBase {
 public:
     MovingAverageCrossStrategy(std::size_t short_window, std::size_t long_window);
+
+    /** @brief Evaluate crossover and emit directional signal on side change. */
     std::optional<SignalEvent> on_market(const MarketEvent& event) override;
 
 private:

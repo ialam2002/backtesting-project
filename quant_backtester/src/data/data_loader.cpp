@@ -1,4 +1,5 @@
 #include "quant/data/data_loader.h"
+
 #include <algorithm>
 #include <cctype>
 #include <fstream>
@@ -6,6 +7,12 @@
 #include <sstream>
 #include <stdexcept>
 #include <utility>
+
+#ifdef QUANT_PARQUET_ENABLED
+#include <arrow/api.h>
+#include <arrow/io/api.h>
+#include <parquet/arrow/reader.h>
+#endif
 
 namespace quant {
 namespace {
@@ -67,7 +74,7 @@ std::vector<Price> load_prices_from_csv(const std::string& file_path) {
             try {
                 prices.push_back(std::stod(cell));
             } catch (...) {
-                // Skip header or malformed row.
+                // Skip header and malformed rows; keep loader forgiving for demos.
             }
         }
     }
@@ -97,6 +104,7 @@ std::vector<OhlcvRecord> load_ohlcv_from_csv(const std::string& file_path) {
         if (first_line) {
             first_line = false;
             const auto first_cell = lower_copy(cells[0]);
+            // Detect and skip header row if present.
             if (first_cell == "timestamp" || first_cell == "ts") {
                 continue;
             }
@@ -112,18 +120,17 @@ std::vector<OhlcvRecord> load_ohlcv_from_csv(const std::string& file_path) {
 }
 
 #ifdef QUANT_PARQUET_ENABLED
-#include <arrow/api.h>
-#include <parquet/arrow/reader.h>
+
 std::vector<OhlcvRecord> load_ohlcv_from_parquet(const std::string& file_path) {
-    // 1. open parquet file
+    // Open parquet file and load entire table into memory for now.
     std::shared_ptr<arrow::io::ReadableFile> input_file = arrow::io::ReadableFile::Open(file_path).ValueOrDie();
 
-    // 2. create parquet reader and read table
+    // Construct parquet reader and materialize Arrow table.
     std::unique_ptr<parquet::arrow::FileReader> parquet_reader;
     parquet::arrow::OpenFile(input_file, arrow::default_memory_pool(), &parquet_reader);
     std::shared_ptr<arrow::Table> table = parquet_reader->ReadTable().ValueOrDie();
 
-    // 3. validate required columns
+    // Validate schema contract expected by OhlcvRecord.
     std::vector<std::string> required_cols = {"timestamp", "open", "high", "low", "close", "volume"};
     for (const auto& col : required_cols) {
         if (table->GetColumnByName(col) == nullptr) {
@@ -131,7 +138,7 @@ std::vector<OhlcvRecord> load_ohlcv_from_parquet(const std::string& file_path) {
         }
     }
 
-    // 4. convert to OhlcvRecord vector
+    // Convert columnar arrays into row records.
     auto timestamp_array = std::static_pointer_cast<arrow::Int64Array>(table->GetColumnByName("timestamp")->chunk(0));
     auto open_array = std::static_pointer_cast<arrow::DoubleArray>(table->GetColumnByName("open")->chunk(0));
     auto high_array = std::static_pointer_cast<arrow::DoubleArray>(table->GetColumnByName("high")->chunk(0));
@@ -157,7 +164,10 @@ std::vector<OhlcvRecord> load_ohlcv_from_parquet(const std::string& file_path) {
 #else
 
 std::vector<OhlcvRecord> load_ohlcv_from_parquet(const std::string& file_path) {
+    (void)file_path;
     throw std::runtime_error("Parquet support not enabled. Rebuild with QUANT_PARQUET_ENABLED defined.");
 }
 
 #endif  // QUANT_PARQUET_ENABLED
+
+}  // namespace quant

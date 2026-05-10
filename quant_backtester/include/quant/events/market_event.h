@@ -4,6 +4,9 @@
 
 namespace quant {
 
+/**
+ * @brief Market data update event emitted by the data feed.
+ */
 struct MarketEvent : public Event {
     MarketEvent(Timestamp ts, InstrumentId instrument, Price price)
         : Event(EventType::Market, ts), instrument(instrument), price(price) {}

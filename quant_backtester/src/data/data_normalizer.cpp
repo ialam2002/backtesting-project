@@ -27,12 +27,14 @@ bool is_valid_ohlcv(const OhlcvRecord& record) {
 }
 
 std::vector<OhlcvRecord> normalize_ohlcv(std::vector<OhlcvRecord> records) {
+    // Remove structurally invalid rows before any downstream transformation.
     records.erase(
         std::remove_if(records.begin(), records.end(), [](const OhlcvRecord& r) {
             return !is_valid_ohlcv(r);
         }),
         records.end());
 
+    // Sort by timestamp so replay and strategy windows are deterministic.
     std::stable_sort(records.begin(), records.end(), [](const OhlcvRecord& lhs, const OhlcvRecord& rhs) {
         return lhs.timestamp < rhs.timestamp;
     });

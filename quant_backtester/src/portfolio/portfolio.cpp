@@ -8,6 +8,7 @@ Portfolio::Portfolio(double starting_cash)
 void Portfolio::on_fill(const FillEvent& fill, double commission) {
     const int signed_qty = fill.side == OrderSide::Buy ? fill.qty : -fill.qty;
 
+    // Realize PnL when incoming fill offsets existing exposure.
     if (position_ != 0 && ((position_ > 0 && signed_qty < 0) || (position_ < 0 && signed_qty > 0))) {
         const Quantity closed = static_cast<Quantity>(
             (position_ > 0) ? std::min(position_, static_cast<Quantity>(-signed_qty))
@@ -23,14 +24,17 @@ void Portfolio::on_fill(const FillEvent& fill, double commission) {
 
     const Quantity new_position = position_ + signed_qty;
     if (new_position == 0) {
+        // Position is fully closed.
         average_cost_ = 0.0;
     } else if ((position_ >= 0 && signed_qty > 0) || (position_ <= 0 && signed_qty < 0)) {
+        // Position is being added to on the same side: blend average cost.
         const double old_notional = average_cost_ * static_cast<double>(std::abs(position_));
         const double add_notional = fill.fill_price * static_cast<double>(std::abs(signed_qty));
         average_cost_ = (old_notional + add_notional) / static_cast<double>(std::abs(new_position));
     } else if ((position_ > 0 && new_position > 0) || (position_ < 0 && new_position < 0)) {
         // Reduced existing position without flipping side.
     } else {
+        // Side flip: remainder opens at current fill price.
         average_cost_ = fill.fill_price;
     }
 

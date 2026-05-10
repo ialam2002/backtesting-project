@@ -10,12 +10,12 @@
 namespace quant {
 
 Engine::Engine(
-        StrategyBase& strategy,
-        OrderManager order_manager,
-        ExecutionEngine execution_engine,
-        Portfolio portfolio,
-        EventLogger* event_logger,
-        std::string artifacts_root)
+    StrategyBase& strategy,
+    OrderManager order_manager,
+    ExecutionEngine execution_engine,
+    Portfolio portfolio,
+    EventLogger* event_logger,
+    std::string artifacts_root)
     : strategy_(strategy),
       order_manager_(order_manager),
       execution_engine_(execution_engine),
@@ -30,6 +30,7 @@ Engine::Engine(
 
 BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instrument) {
     BacktestResult result;
+    // Create deterministic artifact namespace for this run.
     result.run_id = make_run_id();
     result.run_directory = ensure_run_directory(artifacts_root_, result.run_id);
 
@@ -54,6 +55,7 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
                     event_logger_->log_order(*order);
                 }
 
+                // Route execution through partial-fill model for realism.
                 const auto fills = execution_engine_.execute_with_partial_fills(*order, p);
                 for (const auto& fill : fills) {
                     if (event_logger_ != nullptr) {
@@ -80,6 +82,7 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
         event_logger_->write_csv(result.replay_log_path);
     }
 
+    // Persist text report alongside event log to keep each run self-contained.
     if (!result.run_directory.empty()) {
         const auto report_path = std::filesystem::path(result.run_directory) / "report.txt";
         std::ofstream report_file(report_path.string());

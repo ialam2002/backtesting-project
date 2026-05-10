@@ -9,6 +9,9 @@
 
 namespace quant {
 
+/**
+ * @brief Converts orders into one or more fill events using simulation models.
+ */
 class ExecutionEngine {
 public:
     explicit ExecutionEngine(
@@ -16,7 +19,14 @@ public:
         FillSimulator fill_simulator = FillSimulator{})
         : slippage_(slippage), fill_simulator_(fill_simulator) {}
 
+    /**
+     * @brief Execute an order and return the final fill (compatibility helper).
+     */
     FillEvent execute(const OrderEvent& order, Price mid_price) const;
+
+    /**
+     * @brief Execute an order and return all partial fills.
+     */
     std::vector<FillEvent> execute_with_partial_fills(const OrderEvent& order, Price mid_price) const;
 
 private:

@@ -3,6 +3,7 @@
 namespace quant {
 
 FillEvent ExecutionEngine::execute(const OrderEvent& order, Price mid_price) const {
+    // Preserve old API: return the final slice when partial fills are enabled.
     auto fills = execute_with_partial_fills(order, mid_price);
     if (!fills.empty()) {
         return fills.back();
@@ -21,6 +22,7 @@ std::vector<FillEvent> ExecutionEngine::execute_with_partial_fills(const OrderEv
     }
 
     const bool is_buy = order.side == OrderSide::Buy;
+    // All slices use the same simulated execution price in this simplified model.
     const Price fill_price = slippage_.apply(mid_price, is_buy);
     fills.reserve(chunks.size());
     for (Quantity q : chunks) {

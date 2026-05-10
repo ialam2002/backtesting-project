@@ -10,11 +10,18 @@
 
 namespace quant {
 
+/**
+ * @brief High-level OMS facade that runs signal validation, generation, and routing.
+ */
 class OrderManager {
 public:
     explicit OrderManager(Quantity lot_size = 1)
         : signal_handler_(), order_generator_(lot_size), order_router_() {}
 
+    /**
+     * @brief Convert signal intent into a routable order.
+     * @return Empty optional when no order should be emitted.
+     */
     std::optional<OrderEvent> from_signal(const SignalEvent& signal) const;
 
 private:

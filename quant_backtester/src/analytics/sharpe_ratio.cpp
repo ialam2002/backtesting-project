@@ -48,6 +48,7 @@ double sharpe_ratio(const std::vector<double>& returns, double annualization) {
 }
 
 double volatility(const std::vector<double>& returns, double annualization) {
+    // Volatility annualization assumes returns are sampled at uniform intervals.
     const double stddev = sample_stddev(returns, mean_return(returns));
     return stddev * std::sqrt(annualization);
 }
@@ -58,6 +59,7 @@ double sortino_ratio(const std::vector<double>& returns, double annualization) {
     }
 
     const double mean = mean_return(returns);
+    // Downside deviation uses only negative observations.
     std::vector<double> downside;
     downside.reserve(returns.size());
     for (double r : returns) {
@@ -94,6 +96,7 @@ double win_loss_ratio(const std::vector<double>& returns) {
         }
     }
 
+    // Undefined when either bucket is empty; return 0 as neutral sentinel.
     if (wins == 0 || losses == 0) {
         return 0.0;
     }

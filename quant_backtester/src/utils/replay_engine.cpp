@@ -35,6 +35,7 @@ std::vector<LoggedEvent> ReplayEngine::read_csv(const std::string& file_path) {
     std::ifstream in(file_path);
     std::vector<LoggedEvent> out;
     if (!in.is_open()) {
+        // Return empty stream on missing file so callers can decide policy.
         return out;
     }
 
@@ -48,6 +49,7 @@ std::vector<LoggedEvent> ReplayEngine::read_csv(const std::string& file_path) {
             continue;
         }
 
+        // Ignore malformed rows to keep replay tool resilient.
         const auto cells = split_csv(line);
         if (cells.size() != 8) {
             continue;
@@ -73,6 +75,7 @@ bool ReplayEngine::is_same_stream(const std::vector<LoggedEvent>& lhs, const std
         return false;
     }
 
+    // Strict field-by-field equality guarantees deterministic reproducibility.
     for (std::size_t i = 0; i < lhs.size(); ++i) {
         const LoggedEvent& a = lhs[i];
         const LoggedEvent& b = rhs[i];

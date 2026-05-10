@@ -5,6 +5,9 @@
 
 namespace quant {
 
+/**
+ * @brief Compute trailing simple moving average for the latest `window` values.
+ */
 inline double simple_average(const std::deque<double>& values, std::size_t window) {
     if (values.empty() || window == 0 || values.size() < window) {
         return 0.0;

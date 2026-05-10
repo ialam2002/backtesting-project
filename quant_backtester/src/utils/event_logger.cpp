@@ -49,6 +49,7 @@ void EventLogger::push(
     Quantity qty,
     Price price,
     double strength) {
+    // Sequence numbers preserve strict event ordering for replay checks.
     events_.push_back(LoggedEvent{next_sequence_++, type, ts, instrument, side, qty, price, strength});
 }
 
@@ -74,6 +75,7 @@ bool EventLogger::write_csv(const std::string& file_path) const {
         return false;
     }
 
+    // Flat CSV is easy to diff and archive between strategy runs.
     out << "sequence,type,timestamp,instrument,side,qty,price,strength\n";
     out << std::setprecision(17);
     for (const auto& e : events_) {
