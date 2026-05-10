@@ -1,0 +1,19 @@
+add_executable(test_event_queue unit/test_event_queue.cpp)
+target_link_libraries(test_event_queue PRIVATE quant_backtester_lib)
+add_test(NAME test_event_queue COMMAND test_event_queue)
+
+add_executable(test_oms_pipeline unit/test_oms_pipeline.cpp)
+target_link_libraries(test_oms_pipeline PRIVATE quant_backtester_lib)
+add_test(NAME test_oms_pipeline COMMAND test_oms_pipeline)
+
+add_executable(test_portfolio unit/test_portfolio.cpp)
+target_link_libraries(test_portfolio PRIVATE quant_backtester_lib)
+add_test(NAME test_portfolio COMMAND test_portfolio)
+
+add_executable(test_full_backtest integration/test_full_backtest.cpp)
+target_link_libraries(test_full_backtest PRIVATE quant_backtester_lib)
+add_test(NAME test_full_backtest COMMAND test_full_backtest)
+
+add_executable(test_replay_determinism integration/test_replay_determinism.cpp)
+target_link_libraries(test_replay_determinism PRIVATE quant_backtester_lib)
+add_test(NAME test_replay_determinism COMMAND test_replay_determinism)

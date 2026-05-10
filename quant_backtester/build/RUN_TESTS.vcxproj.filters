@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\CMakeFiles\8bc69594d9e57c35a2d3a95049b07b5d\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3C431623-2889-3AF6-8343-C29D953C7B9A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,78 @@
+Start testing: May 09 23:02 Eastern Daylight Time
+----------------------------------------------------------
+1/5 Testing: test_event_queue
+1/5 Test: test_event_queue
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_event_queue.exe"
+Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
+"test_event_queue" start time: May 09 23:02 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"test_event_queue" end time: May 09 23:02 Eastern Daylight Time
+"test_event_queue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: test_oms_pipeline
+2/5 Test: test_oms_pipeline
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_oms_pipeline.exe"
+Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
+"test_oms_pipeline" start time: May 09 23:02 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"test_oms_pipeline" end time: May 09 23:02 Eastern Daylight Time
+"test_oms_pipeline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: test_portfolio
+3/5 Test: test_portfolio
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_portfolio.exe"
+Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
+"test_portfolio" start time: May 09 23:02 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"test_portfolio" end time: May 09 23:02 Eastern Daylight Time
+"test_portfolio" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: test_full_backtest
+4/5 Test: test_full_backtest
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_full_backtest.exe"
+Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
+"test_full_backtest" start time: May 09 23:02 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"test_full_backtest" end time: May 09 23:02 Eastern Daylight Time
+"test_full_backtest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: test_replay_determinism
+5/5 Test: test_replay_determinism
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_replay_determinism.exe"
+Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
+"test_replay_determinism" start time: May 09 23:02 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"test_replay_determinism" end time: May 09 23:02 Eastern Daylight Time
+"test_replay_determinism" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 09 23:02 Eastern Daylight Time
