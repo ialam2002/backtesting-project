@@ -34,6 +34,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/*.cpp")
 set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/engine.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/walk_forward.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -176,6 +177,7 @@ endif()
 # QUANT_SOURCES at src/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/strategy/*.cpp")
 set(OLD_GLOB
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/strategy/donchian_breakout.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/strategy/mean_reversion.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/strategy/moving_average.cpp"
   )

@@ -16,6 +16,9 @@
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\core\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\core\walk_forward.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\csv_reader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -65,6 +68,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\portfolio\risk_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\strategy\donchian_breakout.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\strategy\mean_reversion.cpp">

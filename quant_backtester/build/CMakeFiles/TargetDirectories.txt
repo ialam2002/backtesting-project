@@ -13,5 +13,7 @@ C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/bui
 C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_portfolio.dir
 C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_multi_portfolio.dir
 C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_full_backtest.dir
+C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_donchian_strategy.dir
+C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_walk_forward.dir
 C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/test_replay_determinism.dir
 C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/CMakeFiles/RUN_TESTS.dir

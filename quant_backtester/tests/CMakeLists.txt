@@ -45,6 +45,16 @@ target_include_directories(test_full_backtest PRIVATE ${CATCH2_INCLUDE_DIR})
 target_link_libraries(test_full_backtest PRIVATE quant_backtester_lib)
 add_test(NAME test_full_backtest COMMAND test_full_backtest)
 
+add_executable(test_donchian_strategy unit/test_donchian_strategy.cpp)
+target_include_directories(test_donchian_strategy PRIVATE ${CATCH2_INCLUDE_DIR})
+target_link_libraries(test_donchian_strategy PRIVATE quant_backtester_lib)
+add_test(NAME test_donchian_strategy COMMAND test_donchian_strategy)
+
+add_executable(test_walk_forward unit/test_walk_forward.cpp)
+target_include_directories(test_walk_forward PRIVATE ${CATCH2_INCLUDE_DIR})
+target_link_libraries(test_walk_forward PRIVATE quant_backtester_lib)
+add_test(NAME test_walk_forward COMMAND test_walk_forward)
+
 add_executable(test_replay_determinism integration/test_replay_determinism.cpp)
 target_include_directories(test_replay_determinism PRIVATE ${CATCH2_INCLUDE_DIR})
 target_link_libraries(test_replay_determinism PRIVATE quant_backtester_lib)

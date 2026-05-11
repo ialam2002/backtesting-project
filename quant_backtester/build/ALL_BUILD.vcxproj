@@ -190,6 +190,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{6889B11F-0764-3611-A6C9-4DCC869660CF}</Project>
       <Name>test_data_normalizer</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_donchian_strategy.vcxproj">
+      <Project>{9A690481-D60E-3B54-8B66-E8D055CFB279}</Project>
+      <Name>test_donchian_strategy</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_event_queue.vcxproj">
       <Project>{A3204DBB-2BC7-3817-B616-E6740A0C2542}</Project>
       <Name>test_event_queue</Name>
@@ -221,6 +225,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_replay_determinism.vcxproj">
       <Project>{48378F31-23D6-3D06-AA3F-C95A073D5A8F}</Project>
       <Name>test_replay_determinism</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_walk_forward.vcxproj">
+      <Project>{10ABE8AE-715D-3798-B486-AAF1C3ABAE94}</Project>
+      <Name>test_walk_forward</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
