@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,7 +120,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -147,10 +147,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,7 +163,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -190,10 +190,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -206,7 +206,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -232,10 +232,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\include;C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -309,6 +309,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\report_generator.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\sharpe_ratio.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\core\engine.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\core\experiment_config.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\core\walk_forward.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\csv_reader.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\data\data_feed.cpp" />
@@ -331,6 +332,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\strategy\mean_reversion.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\strategy\moving_average.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\event_logger.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\logger.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\replay_engine.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\utils\run_context.cpp" />
   </ItemGroup>

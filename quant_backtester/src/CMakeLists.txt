@@ -14,6 +14,8 @@ add_library(quant_backtester_lib ${QUANT_SOURCES})
 target_include_directories(quant_backtester_lib
     PUBLIC
         ${PROJECT_SOURCE_DIR}/include
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/third_party
 )
 
 # Conditionally enable Parquet support

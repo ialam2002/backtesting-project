@@ -18,6 +18,9 @@ Production-style C++ backtesting skeleton using CMake.
 - Execution supports partial fill simulation via `FillSimulator`.
 - Analytics includes Sharpe, Sortino, volatility, win/loss ratio, and max drawdown.
 - Each run writes artifacts under `configs/experiments/<run_id>/`.
+- Runtime is config-driven via JSON experiment files (see `configs/experiments/default_experiment.json`).
+- Structured logging writes JSON lines to `configs/experiments/backtester.log`.
+- CI is configured in `.github/workflows/ci.yml` for Windows + Linux build/test.
 
 ## Build
 
@@ -30,14 +33,23 @@ cmake --build build
 ## Run
 
 ```powershell
-.\build\src\backtester.exe
+.\build\src\backtester.exe configs/experiments/default_experiment.json
 ```
 
 Or use the helper script:
 
 ```powershell
-.\scripts\run_experiment.ps1 -BuildType Debug
+.\scripts\run_experiment.ps1 -BuildType Debug -ConfigPath configs/experiments/default_experiment.json
 ```
+
+## Experiment Config
+
+`default_experiment.json` supports:
+
+- strategy selection: `moving_average`, `mean_reversion`, `donchian_breakout`
+- execution params: `lot_size`, `slippage_bps`, `commission_per_share`
+- data source: `prices_csv` or `inline_prices`
+- runtime outputs: `artifacts_root`, `structured_log_path`
 
 ## Test
 

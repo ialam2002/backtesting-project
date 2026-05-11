@@ -1,0 +1,22 @@
+{
+  "strategy": "moving_average",
+  "instrument": 1,
+  "starting_cash": 100000.0,
+  "lot_size": 10,
+  "slippage_bps": 2.0,
+  "commission_per_share": 0.005,
+  "short_window": 3,
+  "long_window": 5,
+  "lookback": 20,
+  "z_threshold": 1.5,
+  "donchian_window": 20,
+  "prices_csv": "",
+  "inline_prices": [
+    100.0, 101.0, 102.0, 101.5, 100.5,
+    99.5, 100.0, 101.0, 103.0, 104.0,
+    103.0, 102.0, 101.0, 102.5, 104.5,
+    105.0, 104.0, 103.5, 104.2, 105.3
+  ],
+  "artifacts_root": "configs/experiments",
+  "structured_log_path": "configs/experiments/backtester.log"
+}

@@ -1,0 +1,3 @@
+{"ts":"2026-05-11T02:17:04Z","level":"INFO","msg":"Loading experiment config from: configs/experiments/default_experiment.json"}
+{"ts":"2026-05-11T02:17:04Z","level":"INFO","msg":"Loaded 20 price bars"}
+{"ts":"2026-05-11T02:17:04Z","level":"INFO","msg":"Backtest completed. Run ID=20260510_221704_7549, events=44"}

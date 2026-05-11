@@ -1,18 +1,37 @@
 #pragma once
 
-#include <iostream>
+#include <fstream>
+#include <mutex>
 #include <string>
 
 namespace quant {
 
-/** @brief Emit informational log line to stdout. */
-inline void log_info(const std::string& msg) {
-    std::cout << "[INFO] " << msg << '\n';
-}
+enum class LogLevel {
+    Info,
+    Warn,
+    Error
+};
 
-/** @brief Emit warning log line to stdout. */
-inline void log_warn(const std::string& msg) {
-    std::cout << "[WARN] " << msg << '\n';
-}
+/**
+ * @brief Minimal structured logger that writes timestamped lines to a file.
+ */
+class StructuredLogger {
+public:
+    StructuredLogger(const std::string& file_path, bool mirror_to_stdout = true);
+
+    void log(LogLevel level, const std::string& msg);
+    void info(const std::string& msg) { log(LogLevel::Info, msg); }
+    void warn(const std::string& msg) { log(LogLevel::Warn, msg); }
+    void error(const std::string& msg) { log(LogLevel::Error, msg); }
+
+private:
+    std::ofstream out_;
+    bool mirror_to_stdout_;
+    std::mutex mu_;
+};
+
+/** @brief Backward-compatible convenience wrappers. */
+void log_info(const std::string& msg);
+void log_warn(const std::string& msg);
 
 }  // namespace quant

@@ -1,5 +1,6 @@
 param(
-    [string]$BuildType = "Debug"
+    [string]$BuildType = "Debug",
+    [string]$ConfigPath = "configs/experiments/default_experiment.json"
 )
 
 Set-StrictMode -Version Latest
@@ -11,7 +12,7 @@ cmake -S . -B build
 cmake --build build --config $BuildType
 
 if ($BuildType -eq "Debug") {
-    .\build\src\Debug\backtester.exe
+    .\build\src\Debug\backtester.exe $ConfigPath
 } else {
-    .\build\src\Release\backtester.exe
+    .\build\src\Release\backtester.exe $ConfigPath
 }

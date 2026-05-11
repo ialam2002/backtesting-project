@@ -34,6 +34,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/*.cpp")
 set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/engine.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/experiment_config.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/core/walk_forward.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -206,6 +207,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/*.cpp")
 set(OLD_GLOB
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/event_logger.cpp"
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/logger.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/replay_engine.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/utils/run_context.cpp"
   )

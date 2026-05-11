@@ -1,13 +1,13 @@
-test_event_queue 8 0.00381707
-test_portfolio 8 0.00551061
-test_full_backtest 8 0.00462616
-test_oms_pipeline 7 0.00406604
-test_replay_determinism 7 0.00571954
-test_data_normalizer 6 0.0050792
-test_execution_partial_fills 6 0.00550102
-test_performance_metrics 6 0.00488282
-test_advanced_metrics 2 0.0155851
-test_multi_portfolio 2 0.0175822
-test_donchian_strategy 1 0.0337998
-test_walk_forward 1 0.0531641
+test_event_queue 10 0.00319653
+test_portfolio 10 0.00300869
+test_full_backtest 10 0.00347391
+test_oms_pipeline 9 0.00361067
+test_replay_determinism 9 0.00379472
+test_data_normalizer 8 0.00367849
+test_execution_partial_fills 8 0.00441936
+test_performance_metrics 8 0.00385191
+test_advanced_metrics 4 0.0100575
+test_multi_portfolio 4 0.00771138
+test_donchian_strategy 3 0.00956737
+test_walk_forward 3 0.0151295
 ---
