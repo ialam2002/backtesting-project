@@ -11,6 +11,7 @@ namespace quant {
 namespace {
 
 const char* level_name(LogLevel level) {
+    // Stable enum-to-string mapping used by both file and console sinks.
     switch (level) {
         case LogLevel::Info: return "INFO";
         case LogLevel::Warn: return "WARN";
@@ -20,6 +21,7 @@ const char* level_name(LogLevel level) {
 }
 
 std::string utc_now_iso8601() {
+    // Emit UTC timestamps to keep logs comparable across machines/time zones.
     const auto now = std::chrono::system_clock::now();
     const std::time_t t = std::chrono::system_clock::to_time_t(now);
 
@@ -41,6 +43,7 @@ void write_stdout(LogLevel level, const std::string& msg) {
 }
 
 std::string escape_json(const std::string& input) {
+    // Minimal escaping so each output line remains valid JSON.
     std::string out;
     out.reserve(input.size());
     for (char c : input) {
@@ -60,6 +63,7 @@ std::string escape_json(const std::string& input) {
 
 StructuredLogger::StructuredLogger(const std::string& file_path, bool mirror_to_stdout)
     : mirror_to_stdout_(mirror_to_stdout) {
+    // Ensure the target directory exists so first run does not fail on missing folders.
     const std::filesystem::path p(file_path);
     if (!p.parent_path().empty()) {
         std::filesystem::create_directories(p.parent_path());
@@ -74,6 +78,7 @@ StructuredLogger::StructuredLogger(const std::string& file_path, bool mirror_to_
 void StructuredLogger::log(LogLevel level, const std::string& msg) {
     std::lock_guard<std::mutex> lock(mu_);
     const std::string escaped = escape_json(msg);
+    // NDJSON format: one JSON object per line for easy streaming and ingestion.
     out_ << "{\"ts\":\"" << utc_now_iso8601()
          << "\",\"level\":\"" << level_name(level)
         << "\",\"msg\":\"" << escaped << "\"}" << '\n';

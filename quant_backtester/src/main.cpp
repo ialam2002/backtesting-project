@@ -14,14 +14,17 @@
 int main(int argc, char** argv) {
     using namespace quant;
 
+    // Allow overriding the experiment config from CLI for quick scenario runs.
     const std::string default_cfg = "configs/experiments/default_experiment.json";
     const std::string cfg_path = (argc > 1) ? argv[1] : default_cfg;
 
     try {
+        // 1) Load config and initialize structured logging.
         const ExperimentConfig cfg = load_experiment_config(cfg_path);
         StructuredLogger slog(cfg.structured_log_path, true);
         slog.info("Loading experiment config from: " + cfg_path);
 
+        // 2) Resolve data source and construct strategy/execution modules.
         std::vector<Price> prices = resolve_prices(cfg);
         slog.info("Loaded " + std::to_string(prices.size()) + " price bars");
 
@@ -34,6 +37,7 @@ int main(int argc, char** argv) {
         Portfolio portfolio(cfg.starting_cash);
         EventLogger event_logger;
 
+        // 3) Execute the backtest and print a user-facing summary.
         Engine engine(*strategy, order_manager, execution_engine, portfolio, &event_logger, cfg.artifacts_root);
         BacktestResult result = engine.run(prices, cfg.instrument);
 
@@ -46,6 +50,7 @@ int main(int argc, char** argv) {
         slog.info("Backtest completed. Run ID=" + result.run_id + ", events=" + std::to_string(result.event_log.size()));
         return 0;
     } catch (const std::exception& ex) {
+        // Keep failure mode explicit for scripting and CI integration.
         std::cerr << "Backtester error: " << ex.what() << '\n';
         return 1;
     }

@@ -1,10 +1,10 @@
-Start testing: May 10 22:19 Eastern Daylight Time
+Start testing: May 10 22:24 Eastern Daylight Time
 ----------------------------------------------------------
 1/12 Testing: test_event_queue
 1/12 Test: test_event_queue
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_event_queue.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_event_queue" start time: May 10 22:19 Eastern Daylight Time
+"test_event_queue" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -14,7 +14,7 @@ All tests passed (9 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_event_queue" end time: May 10 22:19 Eastern Daylight Time
+"test_event_queue" end time: May 10 22:24 Eastern Daylight Time
 "test_event_queue" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -22,7 +22,7 @@ Test Passed.
 2/12 Test: test_data_normalizer
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_data_normalizer.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_data_normalizer" start time: May 10 22:19 Eastern Daylight Time
+"test_data_normalizer" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -32,7 +32,7 @@ All tests passed (6 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_data_normalizer" end time: May 10 22:19 Eastern Daylight Time
+"test_data_normalizer" end time: May 10 22:24 Eastern Daylight Time
 "test_data_normalizer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -40,7 +40,7 @@ Test Passed.
 3/12 Test: test_execution_partial_fills
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_execution_partial_fills.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_execution_partial_fills" start time: May 10 22:19 Eastern Daylight Time
+"test_execution_partial_fills" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -50,7 +50,7 @@ All tests passed (11 assertions in 4 test cases)
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_execution_partial_fills" end time: May 10 22:19 Eastern Daylight Time
+"test_execution_partial_fills" end time: May 10 22:24 Eastern Daylight Time
 "test_execution_partial_fills" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 4/12 Test: test_oms_pipeline
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_oms_pipeline.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_oms_pipeline" start time: May 10 22:19 Eastern Daylight Time
+"test_oms_pipeline" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -68,7 +68,7 @@ All tests passed (10 assertions in 4 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_oms_pipeline" end time: May 10 22:19 Eastern Daylight Time
+"test_oms_pipeline" end time: May 10 22:24 Eastern Daylight Time
 "test_oms_pipeline" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -76,7 +76,7 @@ Test Passed.
 5/12 Test: test_performance_metrics
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_performance_metrics.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_performance_metrics" start time: May 10 22:19 Eastern Daylight Time
+"test_performance_metrics" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -86,7 +86,7 @@ All tests passed (6 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_performance_metrics" end time: May 10 22:19 Eastern Daylight Time
+"test_performance_metrics" end time: May 10 22:24 Eastern Daylight Time
 "test_performance_metrics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,7 +94,7 @@ Test Passed.
 6/12 Test: test_advanced_metrics
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_advanced_metrics.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_advanced_metrics" start time: May 10 22:19 Eastern Daylight Time
+"test_advanced_metrics" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -104,7 +104,7 @@ All tests passed (10 assertions in 8 test cases)
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_advanced_metrics" end time: May 10 22:19 Eastern Daylight Time
+"test_advanced_metrics" end time: May 10 22:24 Eastern Daylight Time
 "test_advanced_metrics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,17 +112,17 @@ Test Passed.
 7/12 Test: test_portfolio
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_portfolio.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_portfolio" start time: May 10 22:19 Eastern Daylight Time
+"test_portfolio" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (6 assertions in 4 test cases)
 
 <end of output>
-Test time =   0.03 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"test_portfolio" end time: May 10 22:19 Eastern Daylight Time
+"test_portfolio" end time: May 10 22:24 Eastern Daylight Time
 "test_portfolio" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -130,17 +130,17 @@ Test Passed.
 8/12 Test: test_multi_portfolio
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_multi_portfolio.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_multi_portfolio" start time: May 10 22:19 Eastern Daylight Time
+"test_multi_portfolio" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (13 assertions in 6 test cases)
 
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_multi_portfolio" end time: May 10 22:19 Eastern Daylight Time
+"test_multi_portfolio" end time: May 10 22:24 Eastern Daylight Time
 "test_multi_portfolio" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -148,17 +148,17 @@ Test Passed.
 9/12 Test: test_full_backtest
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_full_backtest.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_full_backtest" start time: May 10 22:19 Eastern Daylight Time
+"test_full_backtest" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (3 assertions in 2 test cases)
 
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_full_backtest" end time: May 10 22:19 Eastern Daylight Time
+"test_full_backtest" end time: May 10 22:24 Eastern Daylight Time
 "test_full_backtest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -166,7 +166,7 @@ Test Passed.
 10/12 Test: test_donchian_strategy
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_donchian_strategy.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_donchian_strategy" start time: May 10 22:19 Eastern Daylight Time
+"test_donchian_strategy" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -176,7 +176,7 @@ All tests passed (11 assertions in 6 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_donchian_strategy" end time: May 10 22:19 Eastern Daylight Time
+"test_donchian_strategy" end time: May 10 22:24 Eastern Daylight Time
 "test_donchian_strategy" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -184,7 +184,7 @@ Test Passed.
 11/12 Test: test_walk_forward
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_walk_forward.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_walk_forward" start time: May 10 22:19 Eastern Daylight Time
+"test_walk_forward" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -194,7 +194,7 @@ All tests passed (10 assertions in 4 test cases)
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"test_walk_forward" end time: May 10 22:19 Eastern Daylight Time
+"test_walk_forward" end time: May 10 22:24 Eastern Daylight Time
 "test_walk_forward" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -202,18 +202,18 @@ Test Passed.
 12/12 Test: test_replay_determinism
 Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_replay_determinism.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_replay_determinism" start time: May 10 22:19 Eastern Daylight Time
+"test_replay_determinism" start time: May 10 22:24 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (8 assertions in 1 test case)
 
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_replay_determinism" end time: May 10 22:19 Eastern Daylight Time
+"test_replay_determinism" end time: May 10 22:24 Eastern Daylight Time
 "test_replay_determinism" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 10 22:19 Eastern Daylight Time
+End testing: May 10 22:24 Eastern Daylight Time

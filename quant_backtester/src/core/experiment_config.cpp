@@ -13,6 +13,7 @@
 namespace quant {
 
 ExperimentConfig load_experiment_config(const std::string& file_path) {
+    // Parse a single JSON config into a strongly typed runtime config object.
     std::ifstream in(file_path);
     if (!in.is_open()) {
         throw std::runtime_error("Unable to open config file: " + file_path);
@@ -36,6 +37,7 @@ ExperimentConfig load_experiment_config(const std::string& file_path) {
     cfg.z_threshold = j.value("z_threshold", cfg.z_threshold);
     cfg.donchian_window = j.value("donchian_window", cfg.donchian_window);
 
+    // Price source can be either an external CSV path or inline numeric data.
     cfg.prices_csv = j.value("prices_csv", cfg.prices_csv);
     if (j.contains("inline_prices") && j["inline_prices"].is_array()) {
         cfg.inline_prices = j["inline_prices"].get<std::vector<Price>>();
@@ -48,6 +50,7 @@ ExperimentConfig load_experiment_config(const std::string& file_path) {
 }
 
 std::vector<Price> resolve_prices(const ExperimentConfig& cfg) {
+    // Prefer file-based prices when provided; otherwise use inline fallback.
     if (!cfg.prices_csv.empty()) {
         return load_prices_from_csv(cfg.prices_csv);
     }
@@ -58,6 +61,7 @@ std::vector<Price> resolve_prices(const ExperimentConfig& cfg) {
 }
 
 std::unique_ptr<StrategyBase> build_strategy(const ExperimentConfig& cfg) {
+    // Strategy names are intentionally explicit to keep config-driven runs predictable.
     if (cfg.strategy == "moving_average") {
         return std::make_unique<MovingAverageCrossStrategy>(cfg.short_window, cfg.long_window);
     }
