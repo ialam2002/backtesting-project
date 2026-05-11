@@ -25,10 +25,20 @@ target_include_directories(test_performance_metrics PRIVATE ${CATCH2_INCLUDE_DIR
 target_link_libraries(test_performance_metrics PRIVATE quant_backtester_lib)
 add_test(NAME test_performance_metrics COMMAND test_performance_metrics)
 
+add_executable(test_advanced_metrics unit/test_advanced_metrics.cpp)
+target_include_directories(test_advanced_metrics PRIVATE ${CATCH2_INCLUDE_DIR})
+target_link_libraries(test_advanced_metrics PRIVATE quant_backtester_lib)
+add_test(NAME test_advanced_metrics COMMAND test_advanced_metrics)
+
 add_executable(test_portfolio unit/test_portfolio.cpp)
 target_include_directories(test_portfolio PRIVATE ${CATCH2_INCLUDE_DIR})
 target_link_libraries(test_portfolio PRIVATE quant_backtester_lib)
 add_test(NAME test_portfolio COMMAND test_portfolio)
+
+add_executable(test_multi_portfolio unit/test_multi_portfolio.cpp)
+target_include_directories(test_multi_portfolio PRIVATE ${CATCH2_INCLUDE_DIR})
+target_link_libraries(test_multi_portfolio PRIVATE quant_backtester_lib)
+add_test(NAME test_multi_portfolio COMMAND test_multi_portfolio)
 
 add_executable(test_full_backtest integration/test_full_backtest.cpp)
 target_include_directories(test_full_backtest PRIVATE ${CATCH2_INCLUDE_DIR})

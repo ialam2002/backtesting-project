@@ -304,6 +304,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\advanced_metrics.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\drawdown.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\report_generator.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\analytics\sharpe_ratio.cpp" />
@@ -320,6 +321,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\signal_handler.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\slippage_model.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\execution\transaction_cost.cpp" />
+    <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\portfolio\multi_portfolio.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\portfolio\pnl_calculator.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\portfolio\portfolio.cpp" />
     <ClCompile Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\src\portfolio\position_tracker.cpp" />

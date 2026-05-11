@@ -8,6 +8,9 @@
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\src\Debug\backtester.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_advanced_metrics.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_data_normalizer.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
@@ -18,6 +21,9 @@
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_full_backtest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_multi_portfolio.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_oms_pipeline.exe</FullPath>

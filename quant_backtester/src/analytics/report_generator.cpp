@@ -17,6 +17,14 @@ std::string build_performance_report(
     out << "Volatility: " << volatility(returns) << "\n";
     out << "Win/Loss Ratio: " << win_loss_ratio(returns) << "\n";
     out << "Max Drawdown: " << max_drawdown(equity_curve) << "\n";
+    if (equity_curve.size() >= 2) {
+        const double cagr_val = cagr(
+            equity_curve.front(),
+            equity_curve.back(),
+            static_cast<double>(equity_curve.size() - 1));
+        out << "CAGR: " << cagr_val << "\n";
+        out << "Calmar Ratio: " << calmar_ratio(equity_curve) << "\n";
+    }
     if (!equity_curve.empty()) {
         out << "Final Equity: " << equity_curve.back() << "\n";
     }

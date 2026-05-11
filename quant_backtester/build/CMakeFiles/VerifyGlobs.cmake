@@ -4,6 +4,7 @@
 # QUANT_SOURCES at src/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/analytics/*.cpp")
 set(OLD_GLOB
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/analytics/advanced_metrics.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/analytics/drawdown.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/analytics/report_generator.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/analytics/sharpe_ratio.cpp"
@@ -145,6 +146,7 @@ endif()
 # QUANT_SOURCES at src/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/portfolio/*.cpp")
 set(OLD_GLOB
+  "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/portfolio/multi_portfolio.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/portfolio/pnl_calculator.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/portfolio/portfolio.cpp"
   "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/src/portfolio/position_tracker.cpp"
