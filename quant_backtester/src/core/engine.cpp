@@ -61,7 +61,7 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
                     if (event_logger_ != nullptr) {
                         event_logger_->log_fill(fill);
                     }
-                    portfolio_.on_fill(fill, 0.0);
+                    portfolio_.on_fill(fill, execution_engine_.commission_for(fill.qty));
                 }
             }
         }

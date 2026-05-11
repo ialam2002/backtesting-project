@@ -1,9 +1,9 @@
-test_event_queue 5 0.0048976
-test_portfolio 5 0.0043921
-test_full_backtest 5 0.00496614
-test_oms_pipeline 4 0.0058286
-test_replay_determinism 4 0.00723477
-test_data_normalizer 3 0.0078827
-test_execution_partial_fills 3 0.0076417
-test_performance_metrics 3 0.0075744
+test_event_queue 6 0.00599462
+test_portfolio 6 0.00484687
+test_full_backtest 6 0.00591728
+test_oms_pipeline 5 0.00573088
+test_replay_determinism 5 0.00782424
+test_data_normalizer 4 0.00772495
+test_execution_partial_fills 4 0.00863807
+test_performance_metrics 4 0.00727108
 ---

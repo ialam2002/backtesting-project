@@ -1,0 +1,8 @@
+Performance Report
+------------------
+Sharpe: -3.24504
+Sortino: -1.99462
+Volatility: 0.000841233
+Win/Loss Ratio: 1.7392
+Max Drawdown: 0.00021998
+Final Equity: 49993.5

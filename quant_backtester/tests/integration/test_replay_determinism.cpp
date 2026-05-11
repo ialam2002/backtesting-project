@@ -1,4 +1,5 @@
-#include <cassert>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 #include <cstdio>
 #include <filesystem>
 #include <vector>
@@ -11,10 +12,10 @@
 #include "quant/utils/event_logger.h"
 #include "quant/utils/replay_engine.h"
 
-int main() {
-    using namespace quant;
+using namespace quant;
 
-    std::vector<Price> prices = {100, 101, 102, 103, 104, 103, 102, 101, 100, 99, 100, 101};
+TEST_CASE("Replay log round-trips identically after a full backtest", "[integration][replay]") {
+    const std::vector<Price> prices = {100, 101, 102, 103, 104, 103, 102, 101, 100, 99, 100, 101};
 
     MovingAverageCrossStrategy strategy(2, 4);
     OrderManager order_manager(5);
@@ -25,19 +26,18 @@ int main() {
     Engine engine(strategy, order_manager, execution_engine, portfolio, &logger);
     BacktestResult result = engine.run(prices, 7);
 
-    assert(!result.event_log.empty());
-    assert(!result.run_id.empty());
-    assert(!result.run_directory.empty());
-    assert(std::filesystem::exists(result.run_directory));
-    assert(!result.replay_log_path.empty());
-    assert(std::filesystem::exists(result.replay_log_path));
+    REQUIRE_FALSE(result.event_log.empty());
+    REQUIRE_FALSE(result.run_id.empty());
+    REQUIRE_FALSE(result.run_directory.empty());
+    REQUIRE(std::filesystem::exists(result.run_directory));
+    REQUIRE_FALSE(result.replay_log_path.empty());
+    REQUIRE(std::filesystem::exists(result.replay_log_path));
 
-    const char* path = "replay_log.csv";
-    assert(logger.write_csv(path));
+    const char* path = "replay_log_test.csv";
+    REQUIRE(logger.write_csv(path));
 
     const auto replayed = ReplayEngine::read_csv(path);
-    assert(ReplayEngine::is_same_stream(result.event_log, replayed));
+    REQUIRE(ReplayEngine::is_same_stream(result.event_log, replayed));
 
     std::remove(path);
-    return 0;
 }

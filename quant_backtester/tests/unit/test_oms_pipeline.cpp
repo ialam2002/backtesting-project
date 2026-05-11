@@ -1,31 +1,38 @@
-#include <cassert>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 
 #include "quant/execution/order_generator.h"
 #include "quant/execution/order_router.h"
 #include "quant/execution/signal_handler.h"
 
-int main() {
-    using namespace quant;
+using namespace quant;
 
-    SignalHandler signal_handler;
-    OrderGenerator order_generator(7);
-    OrderRouter order_router;
+TEST_CASE("SignalHandler accepts Buy and Sell, rejects Flat", "[oms]") {
+    SignalHandler handler;
+    REQUIRE(handler.accepts(SignalEvent(1, 42, SignalSide::Buy, 0.9)));
+    REQUIRE(handler.accepts(SignalEvent(1, 42, SignalSide::Sell, 0.5)));
+    REQUIRE_FALSE(handler.accepts(SignalEvent(1, 42, SignalSide::Flat, 0.0)));
+}
 
-    SignalEvent buy_signal(1, 42, SignalSide::Buy, 0.9);
-    assert(signal_handler.accepts(buy_signal));
+TEST_CASE("OrderGenerator applies configured lot size", "[oms]") {
+    OrderGenerator generator(7);
+    auto order = generator.generate(SignalEvent(1, 42, SignalSide::Buy, 0.9));
+    REQUIRE(order.has_value());
+    REQUIRE(order->qty == 7);
+}
 
-    auto generated = order_generator.generate(buy_signal);
-    assert(generated.has_value());
-    assert(generated->qty == 7);
+TEST_CASE("OrderGenerator rejects Flat signals", "[oms]") {
+    OrderGenerator generator(7);
+    REQUIRE_FALSE(generator.generate(SignalEvent(1, 42, SignalSide::Flat, 0.0)).has_value());
+}
 
-    auto routed = order_router.route(*generated);
-    assert(routed.has_value());
-    assert(routed->instrument == 42);
-    assert(routed->side == OrderSide::Buy);
-
-    SignalEvent flat_signal(2, 42, SignalSide::Flat, 0.0);
-    assert(!signal_handler.accepts(flat_signal));
-    assert(!order_generator.generate(flat_signal).has_value());
-
-    return 0;
+TEST_CASE("OrderRouter passes Buy order through with correct fields", "[oms]") {
+    OrderGenerator generator(7);
+    OrderRouter router;
+    auto order = generator.generate(SignalEvent(1, 42, SignalSide::Buy, 0.9));
+    REQUIRE(order.has_value());
+    auto routed = router.route(*order);
+    REQUIRE(routed.has_value());
+    REQUIRE(routed->instrument == 42);
+    REQUIRE(routed->side == OrderSide::Buy);
 }

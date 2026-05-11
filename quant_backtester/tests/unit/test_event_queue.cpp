@@ -1,28 +1,37 @@
-#include <cassert>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 #include <memory>
 
 #include "quant/events/event_queue.h"
 #include "quant/events/market_event.h"
 
-int main() {
-    using namespace quant;
+using namespace quant;
 
+TEST_CASE("EventQueue starts empty", "[event_queue]") {
     EventQueue queue;
-    assert(queue.empty());
+    REQUIRE(queue.empty());
+    REQUIRE(queue.size() == 0);
+}
 
+TEST_CASE("EventQueue maintains FIFO order", "[event_queue]") {
+    EventQueue queue;
     queue.push(std::make_unique<MarketEvent>(1, 1, 100.0));
     queue.push(std::make_unique<MarketEvent>(2, 1, 101.0));
 
-    assert(queue.size() == 2);
+    REQUIRE(queue.size() == 2);
 
     auto first = queue.pop();
-    assert(first != nullptr);
-    assert(first->timestamp == 1);
+    REQUIRE(first != nullptr);
+    REQUIRE(first->timestamp == 1);
 
     auto second = queue.pop();
-    assert(second != nullptr);
-    assert(second->timestamp == 2);
+    REQUIRE(second != nullptr);
+    REQUIRE(second->timestamp == 2);
 
-    assert(queue.empty());
-    return 0;
+    REQUIRE(queue.empty());
+}
+
+TEST_CASE("EventQueue pop returns nullptr when empty", "[event_queue]") {
+    EventQueue queue;
+    REQUIRE(queue.pop() == nullptr);
 }
