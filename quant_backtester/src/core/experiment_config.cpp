@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <stdexcept>
+#include <string>
 
 #include "nlohmann/json.hpp"
 
@@ -11,6 +12,67 @@
 #include "quant/strategy/moving_average.h"
 
 namespace quant {
+
+namespace {
+
+void validate_experiment_config(const ExperimentConfig& cfg) {
+    if (cfg.strategy != "moving_average" && cfg.strategy != "mean_reversion" &&
+        cfg.strategy != "donchian_breakout") {
+        throw std::runtime_error("Unsupported strategy in config: " + cfg.strategy);
+    }
+
+    if (cfg.instrument <= 0) {
+        throw std::runtime_error("instrument must be > 0");
+    }
+    if (cfg.starting_cash <= 0.0) {
+        throw std::runtime_error("starting_cash must be > 0");
+    }
+    if (cfg.lot_size <= 0) {
+        throw std::runtime_error("lot_size must be > 0");
+    }
+    if (cfg.slippage_bps < 0.0) {
+        throw std::runtime_error("slippage_bps must be >= 0");
+    }
+    if (cfg.commission_per_share < 0.0) {
+        throw std::runtime_error("commission_per_share must be >= 0");
+    }
+
+    if (cfg.short_window == 0) {
+        throw std::runtime_error("short_window must be > 0");
+    }
+    if (cfg.long_window == 0) {
+        throw std::runtime_error("long_window must be > 0");
+    }
+    if (cfg.short_window >= cfg.long_window) {
+        throw std::runtime_error("short_window must be < long_window");
+    }
+
+    if (cfg.lookback == 0) {
+        throw std::runtime_error("lookback must be > 0");
+    }
+    if (cfg.z_threshold <= 0.0) {
+        throw std::runtime_error("z_threshold must be > 0");
+    }
+    if (cfg.donchian_window == 0) {
+        throw std::runtime_error("donchian_window must be > 0");
+    }
+
+    const bool has_csv_prices = !cfg.prices_csv.empty();
+    const bool has_inline_prices = !cfg.inline_prices.empty();
+    if (has_csv_prices == has_inline_prices) {
+        throw std::runtime_error(
+            "Configure exactly one price source: prices_csv or inline_prices");
+    }
+
+    if (cfg.artifacts_root.empty()) {
+        throw std::runtime_error("artifacts_root must not be empty");
+    }
+    if (cfg.structured_log_path.empty()) {
+        throw std::runtime_error("structured_log_path must not be empty");
+    }
+}
+
+}  // namespace
 
 ExperimentConfig load_experiment_config(const std::string& file_path) {
     // Parse a single JSON config into a strongly typed runtime config object.
@@ -45,6 +107,8 @@ ExperimentConfig load_experiment_config(const std::string& file_path) {
 
     cfg.artifacts_root = j.value("artifacts_root", cfg.artifacts_root);
     cfg.structured_log_path = j.value("structured_log_path", cfg.structured_log_path);
+
+    validate_experiment_config(cfg);
 
     return cfg;
 }

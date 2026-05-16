@@ -186,6 +186,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{165A6B09-7D2E-399A-BB10-E053270F6CE2}</Project>
       <Name>test_advanced_metrics</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_data_loader.vcxproj">
+      <Project>{BADF882D-0237-345D-9085-D205AF78A85A}</Project>
+      <Name>test_data_loader</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_data_normalizer.vcxproj">
       <Project>{6889B11F-0764-3611-A6C9-4DCC869660CF}</Project>
       <Name>test_data_normalizer</Name>
@@ -202,9 +206,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{551F9AEC-99E6-35B4-AB85-804928CB5AB9}</Project>
       <Name>test_execution_partial_fills</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_experiment_config.vcxproj">
+      <Project>{E5303B21-DCBE-3B94-86D5-4468BA8FD14D}</Project>
+      <Name>test_experiment_config</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_full_backtest.vcxproj">
       <Project>{410DEF39-C91A-3809-8C4E-008DF225E591}</Project>
       <Name>test_full_backtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_mean_reversion.vcxproj">
+      <Project>{F505967D-058E-3BC7-993B-EBDA96971EEC}</Project>
+      <Name>test_mean_reversion</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_multi_portfolio.vcxproj">
       <Project>{AD151B64-E07F-37B0-BCC7-93925AE75A75}</Project>
@@ -218,13 +230,25 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{5A10EC6A-C03B-3CD1-86D8-CDC4D006EC5D}</Project>
       <Name>test_performance_metrics</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_pnl_calculator.vcxproj">
+      <Project>{C1227750-7F74-3FDB-84BF-1AE0490BD732}</Project>
+      <Name>test_pnl_calculator</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_portfolio.vcxproj">
       <Project>{BEB97F6E-0952-347C-9532-9F644F09B64B}</Project>
       <Name>test_portfolio</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_position_tracker.vcxproj">
+      <Project>{D301BBEF-4FDB-36CB-8ABE-84A9B94174D2}</Project>
+      <Name>test_position_tracker</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_replay_determinism.vcxproj">
       <Project>{48378F31-23D6-3D06-AA3F-C95A073D5A8F}</Project>
       <Name>test_replay_determinism</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_risk_manager.vcxproj">
+      <Project>{8F6D2257-0C80-3C3E-B2C1-838314027B14}</Project>
+      <Name>test_risk_manager</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\test_walk_forward.vcxproj">
       <Project>{10ABE8AE-715D-3798-B486-AAF1C3ABAE94}</Project>

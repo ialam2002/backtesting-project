@@ -11,6 +11,9 @@
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_advanced_metrics.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_data_loader.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_data_normalizer.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
@@ -23,7 +26,13 @@
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_execution_partial_fills.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_experiment_config.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_full_backtest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_mean_reversion.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_multi_portfolio.exe</FullPath>
@@ -35,10 +44,19 @@
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_performance_metrics.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_pnl_calculator.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_portfolio.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_position_tracker.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_replay_determinism.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_risk_manager.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Iftekhar Alam\Desktop\Projects\backtesting project\quant_backtester\build\tests\Debug\test_walk_forward.exe</FullPath>
