@@ -33,3 +33,15 @@ jobs:
       - name: Test (Linux)
         if: runner.os != 'Windows'
         run: ctest --test-dir build --output-on-failure
+
+      - name: Package (Release)
+        if: matrix.build_type == 'Release'
+        run: cmake --build build --config ${{ matrix.build_type }} --target package
+
+      - name: Upload package artifact (Release)
+        if: matrix.build_type == 'Release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: quant-backtester-${{ runner.os }}-${{ matrix.build_type }}
+          path: build/quant_backtester-*.zip
+          if-no-files-found: error
