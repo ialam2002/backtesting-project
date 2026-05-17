@@ -20,6 +20,9 @@ struct ExperimentConfig {
     Quantity lot_size = 10;
     double slippage_bps = 2.0;
     double commission_per_share = 0.0;
+    Quantity risk_max_order_qty = 1000000;
+    Quantity risk_max_abs_position_per_instrument = 1000000;
+    double risk_max_gross_notional = 1.0e15;
 
     std::size_t short_window = 3;
     std::size_t long_window = 5;

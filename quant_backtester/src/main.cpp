@@ -29,7 +29,12 @@ int main(int argc, char** argv) {
         slog.info("Loaded " + std::to_string(prices.size()) + " price bars");
 
         auto strategy = build_strategy(cfg);
-        OrderManager order_manager(cfg.lot_size);
+        const RiskLimits limits{
+            cfg.risk_max_order_qty,
+            cfg.risk_max_abs_position_per_instrument,
+            cfg.risk_max_gross_notional,
+        };
+        OrderManager order_manager(cfg.lot_size, limits);
         ExecutionEngine execution_engine(
             SlippageModel(cfg.slippage_bps),
             FillSimulator{},

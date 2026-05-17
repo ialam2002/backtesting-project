@@ -134,3 +134,32 @@ TEST_CASE("load_experiment_config rejects invalid moving average windows", "[con
 
     std::filesystem::remove(path);
 }
+
+TEST_CASE("load_experiment_config rejects non-positive risk limits", "[config]") {
+    const std::string path = write_temp_config(
+        "quant_invalid_risk_limits_config.json",
+        R"({
+            "strategy": "moving_average",
+            "instrument": 1,
+            "starting_cash": 100000.0,
+            "lot_size": 10,
+            "slippage_bps": 2.0,
+            "commission_per_share": 0.01,
+            "risk_max_order_qty": 0,
+            "risk_max_abs_position_per_instrument": 10,
+            "risk_max_gross_notional": 1000000.0,
+            "short_window": 3,
+            "long_window": 5,
+            "lookback": 20,
+            "z_threshold": 1.5,
+            "donchian_window": 20,
+            "prices_csv": "",
+            "inline_prices": [100.0, 101.0, 102.0],
+            "artifacts_root": "configs/experiments",
+            "structured_log_path": "configs/experiments/backtester.log"
+        })");
+
+    REQUIRE_THROWS_WITH(load_experiment_config(path), "risk_max_order_qty must be > 0");
+
+    std::filesystem::remove(path);
+}

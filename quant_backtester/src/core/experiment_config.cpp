@@ -36,6 +36,15 @@ void validate_experiment_config(const ExperimentConfig& cfg) {
     if (cfg.commission_per_share < 0.0) {
         throw std::runtime_error("commission_per_share must be >= 0");
     }
+    if (cfg.risk_max_order_qty <= 0) {
+        throw std::runtime_error("risk_max_order_qty must be > 0");
+    }
+    if (cfg.risk_max_abs_position_per_instrument <= 0) {
+        throw std::runtime_error("risk_max_abs_position_per_instrument must be > 0");
+    }
+    if (cfg.risk_max_gross_notional <= 0.0) {
+        throw std::runtime_error("risk_max_gross_notional must be > 0");
+    }
 
     if (cfg.short_window == 0) {
         throw std::runtime_error("short_window must be > 0");
@@ -92,6 +101,10 @@ ExperimentConfig load_experiment_config(const std::string& file_path) {
     cfg.lot_size = j.value("lot_size", cfg.lot_size);
     cfg.slippage_bps = j.value("slippage_bps", cfg.slippage_bps);
     cfg.commission_per_share = j.value("commission_per_share", cfg.commission_per_share);
+    cfg.risk_max_order_qty = j.value("risk_max_order_qty", cfg.risk_max_order_qty);
+    cfg.risk_max_abs_position_per_instrument =
+        j.value("risk_max_abs_position_per_instrument", cfg.risk_max_abs_position_per_instrument);
+    cfg.risk_max_gross_notional = j.value("risk_max_gross_notional", cfg.risk_max_gross_notional);
 
     cfg.short_window = j.value("short_window", cfg.short_window);
     cfg.long_window = j.value("long_window", cfg.long_window);

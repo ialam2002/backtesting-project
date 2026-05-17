@@ -2,9 +2,11 @@
 
 #include <filesystem>
 #include <fstream>
+#include <unordered_map>
 #include <utility>
 
 #include "quant/events/market_event.h"
+#include "quant/portfolio/position_tracker.h"
 #include "quant/utils/run_context.h"
 
 namespace quant {
@@ -38,8 +40,10 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
     result.returns.reserve(prices.size() > 0 ? prices.size() - 1 : 0);
 
     double prev_equity = portfolio_.cash();
+    PositionTracker tracker;
 
     for (Price p : prices) {
+        const std::unordered_map<InstrumentId, Price> marks = {{instrument, p}};
         const MarketEvent market(clock_.now(), instrument, p);
         if (event_logger_ != nullptr) {
             event_logger_->log_market(market);
@@ -50,7 +54,7 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
                 event_logger_->log_signal(*signal);
             }
 
-            if (auto order = order_manager_.from_signal(*signal)) {
+            if (auto order = order_manager_.from_signal(*signal, tracker, marks, nullptr)) {
                 if (event_logger_ != nullptr) {
                     event_logger_->log_order(*order);
                 }
@@ -61,6 +65,7 @@ BacktestResult Engine::run(const std::vector<Price>& prices, InstrumentId instru
                     if (event_logger_ != nullptr) {
                         event_logger_->log_fill(fill);
                     }
+                    tracker.on_fill(fill);
                     portfolio_.on_fill(fill, execution_engine_.commission_for(fill.qty));
                 }
             }
