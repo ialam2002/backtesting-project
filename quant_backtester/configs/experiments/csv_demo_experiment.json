@@ -1,0 +1,20 @@
+{
+  "strategy": "moving_average",
+  "instrument": 1,
+  "starting_cash": 100000.0,
+  "lot_size": 10,
+  "slippage_bps": 2.0,
+  "commission_per_share": 0.005,
+  "risk_max_order_qty": 1000000,
+  "risk_max_abs_position_per_instrument": 1000000,
+  "risk_max_gross_notional": 1000000000000000.0,
+  "short_window": 3,
+  "long_window": 5,
+  "lookback": 20,
+  "z_threshold": 1.5,
+  "donchian_window": 20,
+  "prices_csv": "data/sample_prices.csv",
+  "inline_prices": [],
+  "artifacts_root": "configs/experiments",
+  "structured_log_path": "configs/experiments/backtester.log"
+}

@@ -42,6 +42,13 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/cmake_install.cmake")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/QuantBacktester" TYPE FILE FILES
+    "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/QuantBacktesterConfig.cmake"
+    "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/QuantBacktesterConfigVersion.cmake"
+    )
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)

@@ -11,8 +11,9 @@ Set-Location (Split-Path -Parent $PSScriptRoot)
 cmake -S . -B build
 cmake --build build --config $BuildType
 
-if ($BuildType -eq "Debug") {
-    .\build\src\Debug\backtester.exe $ConfigPath
-} else {
-    .\build\src\Release\backtester.exe $ConfigPath
+$exePath = Join-Path -Path ".\build\src\$BuildType" -ChildPath "backtester.exe"
+if (-not (Test-Path $exePath)) {
+    throw "Built executable not found at: $exePath"
 }
+
+& $exePath $ConfigPath

@@ -1,0 +1,14 @@
+build/
+configs/experiments/run_*/
+configs/experiments/backtester.log
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.exe
+*.vcxproj*
+*.sln
+*.opensdf
+*.sdf
+*.user

@@ -1,10 +1,10 @@
-Start testing: May 16 20:22 Eastern Daylight Time
+Start testing: May 16 20:39 Eastern Daylight Time
 ----------------------------------------------------------
 1/18 Testing: test_event_queue
 1/18 Test: test_event_queue
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_event_queue.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_event_queue.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_event_queue" start time: May 16 20:22 Eastern Daylight Time
+"test_event_queue" start time: May 16 20:39 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -14,15 +14,15 @@ All tests passed (9 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_event_queue" end time: May 16 20:22 Eastern Daylight Time
+"test_event_queue" end time: May 16 20:39 Eastern Daylight Time
 "test_event_queue" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/18 Testing: test_data_normalizer
 2/18 Test: test_data_normalizer
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_data_normalizer.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_data_normalizer.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_data_normalizer" start time: May 16 20:22 Eastern Daylight Time
+"test_data_normalizer" start time: May 16 20:39 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -32,51 +32,51 @@ All tests passed (6 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_data_normalizer" end time: May 16 20:22 Eastern Daylight Time
+"test_data_normalizer" end time: May 16 20:39 Eastern Daylight Time
 "test_data_normalizer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/18 Testing: test_data_loader
 3/18 Test: test_data_loader
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_data_loader.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_data_loader.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_data_loader" start time: May 16 20:22 Eastern Daylight Time
+"test_data_loader" start time: May 16 20:39 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (11 assertions in 6 test cases)
 
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_data_loader" end time: May 16 20:22 Eastern Daylight Time
+"test_data_loader" end time: May 16 20:39 Eastern Daylight Time
 "test_data_loader" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/18 Testing: test_execution_partial_fills
 4/18 Test: test_execution_partial_fills
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_execution_partial_fills.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_execution_partial_fills.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_execution_partial_fills" start time: May 16 20:22 Eastern Daylight Time
+"test_execution_partial_fills" start time: May 16 20:39 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (11 assertions in 4 test cases)
 
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_execution_partial_fills" end time: May 16 20:22 Eastern Daylight Time
+"test_execution_partial_fills" end time: May 16 20:39 Eastern Daylight Time
 "test_execution_partial_fills" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/18 Testing: test_oms_pipeline
 5/18 Test: test_oms_pipeline
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_oms_pipeline.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_oms_pipeline.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_oms_pipeline" start time: May 16 20:22 Eastern Daylight Time
+"test_oms_pipeline" start time: May 16 20:39 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -86,15 +86,15 @@ All tests passed (16 assertions in 6 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_oms_pipeline" end time: May 16 20:22 Eastern Daylight Time
+"test_oms_pipeline" end time: May 16 20:40 Eastern Daylight Time
 "test_oms_pipeline" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/18 Testing: test_performance_metrics
 6/18 Test: test_performance_metrics
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_performance_metrics.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_performance_metrics.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_performance_metrics" start time: May 16 20:22 Eastern Daylight Time
+"test_performance_metrics" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -104,15 +104,15 @@ All tests passed (6 assertions in 3 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_performance_metrics" end time: May 16 20:22 Eastern Daylight Time
+"test_performance_metrics" end time: May 16 20:40 Eastern Daylight Time
 "test_performance_metrics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 7/18 Testing: test_advanced_metrics
 7/18 Test: test_advanced_metrics
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_advanced_metrics.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_advanced_metrics.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_advanced_metrics" start time: May 16 20:22 Eastern Daylight Time
+"test_advanced_metrics" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -122,15 +122,15 @@ All tests passed (10 assertions in 8 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_advanced_metrics" end time: May 16 20:22 Eastern Daylight Time
+"test_advanced_metrics" end time: May 16 20:40 Eastern Daylight Time
 "test_advanced_metrics" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 8/18 Testing: test_portfolio
 8/18 Test: test_portfolio
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_portfolio.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_portfolio.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_portfolio" start time: May 16 20:22 Eastern Daylight Time
+"test_portfolio" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -140,15 +140,15 @@ All tests passed (6 assertions in 4 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_portfolio" end time: May 16 20:22 Eastern Daylight Time
+"test_portfolio" end time: May 16 20:40 Eastern Daylight Time
 "test_portfolio" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 9/18 Testing: test_position_tracker
 9/18 Test: test_position_tracker
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_position_tracker.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_position_tracker.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_position_tracker" start time: May 16 20:22 Eastern Daylight Time
+"test_position_tracker" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -158,15 +158,15 @@ All tests passed (12 assertions in 4 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_position_tracker" end time: May 16 20:22 Eastern Daylight Time
+"test_position_tracker" end time: May 16 20:40 Eastern Daylight Time
 "test_position_tracker" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 10/18 Testing: test_risk_manager
 10/18 Test: test_risk_manager
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_risk_manager.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_risk_manager.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_risk_manager" start time: May 16 20:22 Eastern Daylight Time
+"test_risk_manager" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -176,15 +176,15 @@ All tests passed (8 assertions in 4 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_risk_manager" end time: May 16 20:22 Eastern Daylight Time
+"test_risk_manager" end time: May 16 20:40 Eastern Daylight Time
 "test_risk_manager" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 11/18 Testing: test_pnl_calculator
 11/18 Test: test_pnl_calculator
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_pnl_calculator.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_pnl_calculator.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_pnl_calculator" start time: May 16 20:22 Eastern Daylight Time
+"test_pnl_calculator" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -194,15 +194,15 @@ All tests passed (7 assertions in 2 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_pnl_calculator" end time: May 16 20:22 Eastern Daylight Time
+"test_pnl_calculator" end time: May 16 20:40 Eastern Daylight Time
 "test_pnl_calculator" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 12/18 Testing: test_multi_portfolio
 12/18 Test: test_multi_portfolio
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_multi_portfolio.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_multi_portfolio.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_multi_portfolio" start time: May 16 20:22 Eastern Daylight Time
+"test_multi_portfolio" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -212,15 +212,15 @@ All tests passed (13 assertions in 6 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_multi_portfolio" end time: May 16 20:22 Eastern Daylight Time
+"test_multi_portfolio" end time: May 16 20:40 Eastern Daylight Time
 "test_multi_portfolio" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 13/18 Testing: test_full_backtest
 13/18 Test: test_full_backtest
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_full_backtest.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_full_backtest.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_full_backtest" start time: May 16 20:22 Eastern Daylight Time
+"test_full_backtest" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -230,15 +230,15 @@ All tests passed (3 assertions in 2 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_full_backtest" end time: May 16 20:22 Eastern Daylight Time
+"test_full_backtest" end time: May 16 20:40 Eastern Daylight Time
 "test_full_backtest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 14/18 Testing: test_donchian_strategy
 14/18 Test: test_donchian_strategy
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_donchian_strategy.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_donchian_strategy.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_donchian_strategy" start time: May 16 20:22 Eastern Daylight Time
+"test_donchian_strategy" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -248,15 +248,15 @@ All tests passed (11 assertions in 6 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_donchian_strategy" end time: May 16 20:22 Eastern Daylight Time
+"test_donchian_strategy" end time: May 16 20:40 Eastern Daylight Time
 "test_donchian_strategy" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 15/18 Testing: test_mean_reversion
 15/18 Test: test_mean_reversion
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_mean_reversion.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_mean_reversion.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_mean_reversion" start time: May 16 20:22 Eastern Daylight Time
+"test_mean_reversion" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -266,62 +266,62 @@ All tests passed (11 assertions in 5 test cases)
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_mean_reversion" end time: May 16 20:22 Eastern Daylight Time
+"test_mean_reversion" end time: May 16 20:40 Eastern Daylight Time
 "test_mean_reversion" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 16/18 Testing: test_walk_forward
 16/18 Test: test_walk_forward
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_walk_forward.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_walk_forward.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_walk_forward" start time: May 16 20:22 Eastern Daylight Time
+"test_walk_forward" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (10 assertions in 4 test cases)
 
 <end of output>
-Test time =   0.05 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_walk_forward" end time: May 16 20:22 Eastern Daylight Time
+"test_walk_forward" end time: May 16 20:40 Eastern Daylight Time
 "test_walk_forward" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 17/18 Testing: test_experiment_config
 17/18 Test: test_experiment_config
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_experiment_config.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_experiment_config.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_experiment_config" start time: May 16 20:22 Eastern Daylight Time
+"test_experiment_config" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (7 assertions in 5 test cases)
 
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_experiment_config" end time: May 16 20:22 Eastern Daylight Time
+"test_experiment_config" end time: May 16 20:40 Eastern Daylight Time
 "test_experiment_config" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/18 Testing: test_replay_determinism
 18/18 Test: test_replay_determinism
-Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Debug/test_replay_determinism.exe"
+Command: "C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests/Release/test_replay_determinism.exe"
 Directory: C:/Users/Iftekhar Alam/Desktop/Projects/backtesting project/quant_backtester/build/tests
-"test_replay_determinism" start time: May 16 20:22 Eastern Daylight Time
+"test_replay_determinism" start time: May 16 20:40 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 ===============================================================================
 All tests passed (8 assertions in 1 test case)
 
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"test_replay_determinism" end time: May 16 20:22 Eastern Daylight Time
+"test_replay_determinism" end time: May 16 20:40 Eastern Daylight Time
 "test_replay_determinism" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 16 20:22 Eastern Daylight Time
+End testing: May 16 20:40 Eastern Daylight Time
